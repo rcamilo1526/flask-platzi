@@ -1,0 +1,17 @@
+{% macro render_todo(todo) %}
+  <li>Descripción: {{todo}}</li>
+{% endmacro %}
+
+{% block content %}
+    {% if user_ip %}
+        <h1> Hello World Platzi {{user_ip}}</h1>
+    {% else %}
+        <a href="{{url_for('index')}}">Ir a Inicio</a>
+    {% endif %}
+
+    <ul>
+        {% for todo in todos %}
+            {{ macros.render_todo(todo)}}
+        {% endfor %}
+    </ul>
+{% endblock %}
