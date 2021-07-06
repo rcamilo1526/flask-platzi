@@ -3,8 +3,6 @@
         <h1>Bienvenido {{username | capitalize}}</h1>
     {% endif %}
     {% if user_ip %}
-        <h1>Hello World by Platzi <small>Your IP adress is {{user_ip}}</small></h1>
-    {% else %}
-        <h1 >No IP in cookies <a href="{{url_for('index')}}"> go to Home</a></h1>
+        <h1><small>Tu IP es {{user_ip}}</small></h1>
     {% endif %}
 </div>
